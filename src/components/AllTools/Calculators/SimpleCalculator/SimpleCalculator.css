@@ -1,0 +1,9 @@
+.result-panel {
+  overflow-y: hidden !important;
+  overflow-x: hidden !important;
+  background-color: white !important;
+}
+
+.last {
+  background-color: #0b70e7 !important;
+}
