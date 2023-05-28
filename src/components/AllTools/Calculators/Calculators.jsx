@@ -3,6 +3,7 @@ import "./Calculators.css";
 import { Box, ToggleButton, ToggleButtonGroup } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 import SimpleCalculator from "./SimpleCalculator/SimpleCalculator";
+import CompoundIntCalculator from "./CompoundIntCalculator/CompoundIntCalculator";
 
 function Calculators() {
   const [calculatorType, setCalculatorType] = useState("basic");
@@ -187,7 +188,7 @@ function Calculators() {
         ) : calculatorType === "simple" ? (
           "Simple Interest Calculator"
         ) : calculatorType === "compound" ? (
-          "Compound Interest Calculator"
+          <CompoundIntCalculator />
         ) : (
           ""
         )}
