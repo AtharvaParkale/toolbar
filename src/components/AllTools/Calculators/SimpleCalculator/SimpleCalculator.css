@@ -7,3 +7,6 @@
 .last {
   background-color: #0b70e7 !important;
 }
+.button-panel .button {
+  font-size: 15px !important;
+}
