@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Calculators.css";
 import { Box, ToggleButton, ToggleButtonGroup } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
@@ -9,13 +9,22 @@ import DaysCalculator from "./DaysCalculator/DaysCalculator";
 import GSTCalculator from "./GstCalculator/GSTCalculator";
 import GSTInputCalculator from "./GSTInputCalculator/GSTInputCalculator";
 
-function Calculators() {
+function Calculators({ openCalculator, setOpenCalculators }) {
   const [calculatorType, setCalculatorType] = useState("basic");
 
   const handleChangeCalculator = (e) => {
     console.log(calculatorType);
     setCalculatorType(e);
   };
+
+  const closeTheCalculatorSection = () => {
+    setOpenCalculators(false);
+  };
+
+  useEffect(() => {
+    // Do something with the count variable
+    // console.log("Open Calculator :", openCalculator);
+  }, [openCalculator]);
   return (
     <Box
       className="calculators-container"
@@ -42,7 +51,12 @@ function Calculators() {
         }}
       >
         <span>Calculators</span>
-        <CloseIcon fontSize="3px" />
+        <CloseIcon
+          fontSize="3px"
+          onClick={() => {
+            closeTheCalculatorSection();
+          }}
+        />
       </Box>
       <Box
         className="calculators-options-container"

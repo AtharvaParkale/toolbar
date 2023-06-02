@@ -28,10 +28,13 @@ function ToolBar() {
         className="toolbar-container"
         sx={{ position: "absolute", zIndex: "50" }}
       >
-        <Box className="toolbar-body" sx={{
-
-          borderRadius:openCalendar || openCalculators ? "7px 0px 0px 7px" : "7px",
-        }}>
+        <Box
+          className="toolbar-body"
+          sx={{
+            borderRadius:
+              openCalendar || openCalculators ? "7px 0px 0px 7px" : "7px",
+          }}
+        >
           <Tooltip title="Calculators" placement="right">
             <CalculateIcon
               onClick={() => {
@@ -66,9 +69,9 @@ function ToolBar() {
           sx={{
             // border: "2px solid green",
             height: "87vh",
-            width:openCalendar || openCalculators ? "350px" : "0px",
+            width: openCalendar || openCalculators ? "350px" : "0px",
             transition: "width 0.3s",
-            padding:"3vh 3vh 3vh 0vh",
+            padding: "3vh 3vh 3vh 0vh",
           }}
         >
           <Box
@@ -77,18 +80,19 @@ function ToolBar() {
               width: openCalculators ? "350px" : "0px",
               height: "87vh",
               transition: "width 0.3s",
-              position:"absolute",
-              borderRadius:"0px 7px 7px 0px",
-              boxShadow:"2px 2px 20px #00000085",
-              display:"flex",
-              alignItems:"center",
-              justifyContent:"center"
+              position: "absolute",
+              borderRadius: "0px 7px 7px 0px",
+              boxShadow: "2px 2px 20px #00000085",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
             }}
           >
-            {openCalculators && 
-            <>
-            <Calculators/>
-            </>}
+            {openCalculators && (
+              <>
+                <Calculators openCalculators={openCalculators} setOpenCalculators={setOpenCalculators}/>
+              </>
+            )}
           </Box>
 
           <Box
@@ -97,9 +101,9 @@ function ToolBar() {
               width: openCalendar ? "350px" : "0px",
               height: "87vh",
               transition: "width 0.3s",
-              position:"absolute",
-              borderRadius:"0px 7px 7px 0px",
-              boxShadow:"2px 2px 20px #00000085"
+              position: "absolute",
+              borderRadius: "0px 7px 7px 0px",
+              boxShadow: "2px 2px 20px #00000085",
             }}
           >
             {openCalendar && <>Calendar</>}
