@@ -6,6 +6,7 @@ import SimpleCalculator from "./SimpleCalculator/SimpleCalculator";
 import CompoundIntCalculator from "./CompoundIntCalculator/CompoundIntCalculator";
 import SimpleIntCalculator from "./SimpleIntCalculator/SimpleIntCalculator";
 import DaysCalculator from "./DaysCalculator/DaysCalculator";
+import GSTCalculator from "./GstCalculator/GSTCalculator";
 
 function Calculators() {
   const [calculatorType, setCalculatorType] = useState("basic");
@@ -184,11 +185,11 @@ function Calculators() {
         {calculatorType === "basic" ? (
           <SimpleCalculator />
         ) : calculatorType === "gst" ? (
-          "Gst Calculator"
+          <GSTCalculator />
         ) : calculatorType === "gstInput" ? (
           "Gst Input Calculator"
         ) : calculatorType === "days" ? (
-          <DaysCalculator/>
+          <DaysCalculator />
         ) : calculatorType === "simple" ? (
           <SimpleIntCalculator />
         ) : calculatorType === "compound" ? (
