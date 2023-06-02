@@ -5,6 +5,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import SimpleCalculator from "./SimpleCalculator/SimpleCalculator";
 import CompoundIntCalculator from "./CompoundIntCalculator/CompoundIntCalculator";
 import SimpleIntCalculator from "./SimpleIntCalculator/SimpleIntCalculator";
+import DaysCalculator from "./DaysCalculator/DaysCalculator";
 
 function Calculators() {
   const [calculatorType, setCalculatorType] = useState("basic");
@@ -176,6 +177,8 @@ function Calculators() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
+          // overflowY:"scroll"
+          overflowY: "scroll",
         }}
       >
         {calculatorType === "basic" ? (
@@ -185,7 +188,7 @@ function Calculators() {
         ) : calculatorType === "gstInput" ? (
           "Gst Input Calculator"
         ) : calculatorType === "days" ? (
-          "Days Calculator"
+          <DaysCalculator/>
         ) : calculatorType === "simple" ? (
           <SimpleIntCalculator />
         ) : calculatorType === "compound" ? (
