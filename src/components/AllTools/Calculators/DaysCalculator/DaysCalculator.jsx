@@ -116,22 +116,22 @@ function DaysCalculator() {
       <Box className="dayCount_innercontainer" >
         <Box className="dayCount_innercontainer_sec">
           <Box className="startDate_container">
+            <label>Start Date</label>
             <input
               type="date"
               onChange={(e) => {
                 setStartDate(e.target.value);
               }}
             />
-            <label>Start Date</label>
           </Box>
           <Box className="endDate_container">
+            <label>End Date</label>
             <input
               type="date"
               onChange={(e) => {
                 setEndDate(e.target.value);
               }}
             />
-            <label>End Date</label>
           </Box>
         </Box>
         <Box className="calender_buttons dayCount_innercontainer_sec">

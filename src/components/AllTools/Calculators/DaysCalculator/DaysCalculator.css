@@ -17,7 +17,8 @@
   justify-content: space-evenly;
   width: 100%;
   margin-bottom: 0vh;
-  height: 120px;
+  height: 185px;
+  flex-direction: column;
 }
 .dayCount_innercontainer_sec2 {
   height: 17vh;
@@ -32,16 +33,22 @@
   cursor: pointer;
   font-size: 11px;
   height: 5vh !important;
+
+  font-weight: 600;
+  border-radius: 6px;
+  color: #000000a8;
+  font-size: 9px;
 }
 
 .dayCount_innercontainer_sec label {
   font-family: "Montserrat", sans-serif;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 11px;
   text-align: center;
-  width: 100%;
+  width: fit-content;
   color: #000000d4;
   margin-bottom: 0;
+  margin-bottom: 0.5vh;
 }
 
 .startDate_container {
@@ -50,7 +57,7 @@
   justify-content: space-evenly;
   flex-direction: column;
   /* border: 2px solid black; */
-  width: 45%;
+  width: 92%;
   height: 9vh;
 }
 
@@ -60,8 +67,13 @@
   justify-content: space-evenly;
   flex-direction: column;
   /* border: 2px solid black; */
-  width: 40%;
+  width: 92%;
   height: 9vh;
+
+  font-weight: 600;
+  border-radius: 6px;
+  color: #000000a8;
+  font-size: 9px;
 }
 
 .dayCount_innercontainer_sec button {
@@ -180,7 +192,7 @@
   /* border: 2px solid black; */
   margin-bottom: 0;
   margin-top: 0;
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 500;
 }
 
@@ -193,7 +205,7 @@
   width: 90%;
   /* border: 2px solid black; */
   margin-bottom: 0;
-  font-size: 15px;
+  font-size: 12px;
 }
 
 #display_count_section2_desc {

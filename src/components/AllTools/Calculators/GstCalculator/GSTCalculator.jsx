@@ -5,7 +5,7 @@ import { BsPercent } from "react-icons/bs";
 import { Box } from "@mui/material";
 
 function GSTCalculator() {
-  const [showProfit, setShowProfit] = useState(true);
+  const [showProfit, setShowProfit] = useState(false);
   const [displayGST, setDisplayGST] = useState(0);
   const [gstAmt, setGstAmt] = useState(0);
   const [gstRate, setGstRate] = useState(5);
@@ -205,7 +205,7 @@ function GSTCalculator() {
                 {/* {gstType ? */}
                 <p
                   onClick={() => {
-                    showProfit ? setShowProfit(false) : setShowProfit(true);
+                    showProfit ? setShowProfit(true) : setShowProfit(true);
                   }}
                 >
                   + Add Profit Ratio
